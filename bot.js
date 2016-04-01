@@ -34,20 +34,10 @@ function respond() {
             postMessage("AAAAAAAAA");
         } else if (btho.test(request.text)) {
             postMessage("We're gonna beat the ever-living");
-            this.res.end();
-            this.res.writeHead(200);
             postMessage("ever-loving");
-            this.res.end();
-            this.res.writeHead(200);
             postMessage("compound");
-            this.res.end();
-            this.res.writeHead(200);
             postMessage("complex");
-            this.res.end();
-            this.res.writeHead(200);
             postMessage("Fightin' Texas Aggie");
-            this.res.end();
-            this.res.writeHead(200);
             postMessage("hell outta 'em, Ags!");
         } else {
             if(Math.random() < 0.05) {
