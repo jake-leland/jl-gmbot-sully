@@ -33,12 +33,12 @@ function respond() {
         } else if (wildcat19.test(request.text)) {
             postMessage("AAAAAAAAA");
         } else if (btho.test(request.text)) {
-            postMessage("We're gonna beat the ever-living");
-            postMessage("ever-loving");
-            postMessage("compound");
-            postMessage("complex");
-            postMessage("Fightin' Texas Aggie");
-            postMessage("hell outta 'em, Ags!");
+            postMessage("We're gonna beat the ever-living\n" +
+                "ever-loving\n" +
+                "compound\n" +
+                "complex\n" +
+                "Fightin' Texas Aggie\n" +
+                "hell outta 'em, Ags!");
         } else {
             if(Math.random() < 0.05) {
                 postMessage("AND THAT'S WHAT WE'RE GONNA DO TO 'EM, AGS!");
