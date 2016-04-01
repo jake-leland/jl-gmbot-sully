@@ -5,7 +5,6 @@ var botID = process.env.BOT_ID;
 function respond() {
     var request = JSON.parse(this.req.chunks[0]);
 
-
     if (request.text && request.sender_type != "bot") {
         handleRequest(request.text)
     } else {
@@ -16,7 +15,7 @@ function respond() {
 }
 
 function handleRequest(reqText) {
-    var howdy = /Howdy|Sully/i;
+    var howdy = /Howdy/i;
 
     if(howdy.test(reqText)) {
         this.res.writeHead(200);
