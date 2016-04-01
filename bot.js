@@ -5,7 +5,13 @@ var botID = process.env.BOT_ID;
 function respond() {
     var request = JSON.parse(this.req.chunks[0]),
         howdy = /Howdy|Sully/i,
-        whoop = /Redass|Good Bull|Old Army/i;
+        whoop = /Red( )?ass|Good Bull|Old Army/i;
+        hiss = /t(-| )?sip|2%er|Two( |-)Percenter|Offsides/i;
+        gigem = /thanks/i;
+        wildcat16 = /2016/i;
+        wildcat17 = /2017/i;
+        wildcat18 = /2018/i;
+        wildcat19 = /2019/i;
 
     if (request.text && request.sender_type != "bot") {
         this.res.writeHead(200);
@@ -13,8 +19,19 @@ function respond() {
             postMessage("Howdy, " + request.name + "!!");
         } else if (whoop.test(request.text)) {
             postMessage("WHOOP");
-        }
-        else {
+        } else if (hiss.test(request.text)) {
+            postMessage("hisssssss");
+        } else if (thanks.test(request.text)) {
+            postMessage("... and Gig 'Em");
+        } else if (wildcat16.test(request.text)) {
+            postMessage("AAAAAAAAA");
+        } else if (wildcat17.test(request.text)) {
+            postMessage("A-A-A-A-A");
+        } else if (wildcat18.test(request.text)) {
+            postMessage("A-A-A WHOOP");
+        } else if (wildcat19.test(request.text)) {
+            postMessage("A WHOOP");
+        } else {
             console.log("don't care");
         }
         this.res.end();
