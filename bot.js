@@ -5,14 +5,14 @@ var botID = process.env.BOT_ID;
 function respond() {
     var request = JSON.parse(this.req.chunks[0]),
         howdy = /Howdy|Sully/i,
-        whoop = /Red( )?ass|Good Bull|Old Army|Gig( )?(')?Em/i;
-        hiss = /t(-| )?sip|2%er|Two( |-)Percenter|Offsides/i;
-        gigem = /Thanks/i;
-        wildcat16 = /2016/i;
-        wildcat17 = /2017/i;
-        wildcat18 = /2018/i;
-        wildcat19 = /2019/i;
-        btho = /BTHO/Beat The Hell (Outta|Out Of)/i;
+        whoop = /Red( )?ass|Good Bull|Old Army|Gig( )?(')?Em/i,
+        hiss = /t(-| )?sip|2%er|Two( |-)Percenter|Offsides/i,
+        gigem = /Thanks/i,
+        wildcat16 = /2016/i,
+        wildcat17 = /2017/i,
+        wildcat18 = /2018/i,
+        wildcat19 = /2019/i,
+        btho = /BTHO|Beat The Hell (Outta|Out Of)/i;
 
     if (request.text && request.sender_type != "bot") {
         this.res.writeHead(200);
