@@ -4,18 +4,20 @@ var botID = process.env.BOT_ID;
 
 function respond() {
     var request = JSON.parse(this.req.chunks[0]),
-        howdy = /Howdy|Sully/i;
+        howdy = /Howdy|Sully/i,
+        whoop = /Redass|Good Bull|Old Army/i;
 
     if (request.text && request.sender_type != "bot") {
-        if(howdy.test(request.text)) {
-            this.res.writeHead(200);
+        this.res.writeHead(200);
+        if (howdy.test(request.text)) {
             postMessage("Howdy, " + request.name + "!!");
-            this.res.end();
-        } else {
-            console.log("don't care");
-            this.res.writeHead(200);
-            this.res.end();
+        } else if (whoop.test(request.text)) {
+            postMessage("WHOOP");
         }
+        else {
+            console.log("don't care");
+        }
+        this.res.end();
     } else {
         console.log("don't care");
         this.res.writeHead(200);
