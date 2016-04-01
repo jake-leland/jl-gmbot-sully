@@ -6,7 +6,7 @@ function respond() {
     var request = JSON.parse(this.req.chunks[0]);
 
     if (request.text && request.sender_type != "bot") {
-        handleRequest(request.text)
+        handleRequest(request.text);
     } else {
         console.log("don't care");
         this.res.writeHead(200);
