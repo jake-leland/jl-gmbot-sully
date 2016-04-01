@@ -12,7 +12,8 @@ function respond() {
         wildcat17 = /2017/i,
         wildcat18 = /2018/i,
         wildcat19 = /2019/i,
-        btho = /BTHO|Beat The Hell (Outta|Out Of)/i;
+        btho = /BTHO|Beat The Hell (Outta|Out Of)/i,
+        warhymn = /off the wood/i;
 
     if (request.text && request.sender_type != "bot") {
         this.res.writeHead(200);
@@ -39,8 +40,42 @@ function respond() {
                 "complex\n" +
                 "Fightin' Texas Aggie\n" +
                 "hell outta 'em, Ags!");
+        } else if (warhymn.test(request.text)) {
+            postMessage("Hullabaloo, Caneck! Caneck!\n" +
+                "Hullabaloo, Caneck! Caneck!\n\n" +
+                "Good-bye to texas university\n" +
+                "So long to the orange and the white\n" +
+                "Good luck to dear old Texas Aggies\n" +
+                "They are the boys that show the real old fight\n" +
+                "“The eyes of Texas are upon you . . .”\n" +
+                "That is the song they sing so well\n" +
+                "So good-bye to texas university\n" +
+                "We’re going to beat you all to\n" +
+                "Chig-gar-roo-gar-rem\n" +
+                "Chig-gar-roo-gar-rem\n" +
+                "Rough Tough! Real Stuff! Texas A&M!\n\n" +
+                "Good-bye to texas university\n" +
+                "So long to the orange and the white\n" +
+                "Good luck to dear old Texas Aggies\n" +
+                "They are the boys that show the real old fight\n" +
+                "“The eyes of Texas are upon you . . .”\n" +
+                "That is the song they sing so well\n" +
+                "So good-bye to texas university\n" +
+                "We’re going to beat you all to\n" +
+                "Chig-gar-roo-gar-rem\n" +
+                "Chig-gar-roo-gar-rem\n" +
+                "Rough Tough! Real Stuff! Texas A&M!\n\n" +
+                "Saw Varsity's Horns Off!\n" +
+                "Saw Varsity's Horns Off!\n" +
+                "Saw Varsity's Horns Off!\n" +
+                "Short!\n\n" +
+                "Saw Varsity's Horns Off!\n" +
+                "Saw Varsity's Horns Off!\n" +
+                "Saw Varsity's Horns Off!\n" +
+                "Short!\n\n" +
+                "A-A-A WHOOP!")
         } else {
-            if(Math.random() < 0.05) {
+            if (Math.random() < 0.05) {
                 postMessage("AND THAT'S WHAT WE'RE GONNA DO TO 'EM, AGS!");
             } else {
                 console.log("don't care");
