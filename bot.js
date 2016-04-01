@@ -12,6 +12,7 @@ function respond() {
         wildcat17 = /2017/i;
         wildcat18 = /2018/i;
         wildcat19 = /2019/i;
+        btho = /BTHO/Beat The Hell (Outta|Out Of)/i;
 
     if (request.text && request.sender_type != "bot") {
         this.res.writeHead(200);
@@ -31,8 +32,25 @@ function respond() {
             postMessage("A-A-A-A-A");
         } else if (wildcat19.test(request.text)) {
             postMessage("AAAAAAAAA");
+        } else if (btho.test(request.text)) {
+            postMessage("We're gonna beat the ever-living");
+            this.res.end();
+            this.res.writeHead(200);
+            postMessage("ever-loving");
+            this.res.end();
+            this.res.writeHead(200);
+            postMessage("compound");
+            this.res.end();
+            this.res.writeHead(200);
+            postMessage("complex");
+            this.res.end();
+            this.res.writeHead(200);
+            postMessage("Fightin' Texas Aggie");
+            this.res.end();
+            this.res.writeHead(200);
+            postMessage("hell outta 'em, Ags!");
         } else {
-            if(Math.random() < 0.2) {
+            if(Math.random() < 0.05) {
                 postMessage("AND THAT'S WHAT WE'RE GONNA DO TO 'EM, AGS!");
             } else {
                 console.log("don't care");
