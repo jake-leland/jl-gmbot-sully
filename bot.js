@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 function respond() {
     var request = JSON.parse(this.req.chunks[0]),
         howdy = /Howdy|Sully/i,
-        whoop = /Red( )?ass|Good Bull|Old Army/i;
+        whoop = /Red( )?ass|Good Bull|Old Army|Gig( )?(')?Em/i;
         hiss = /t(-| )?sip|2%er|Two( |-)Percenter|Offsides/i;
         gigem = /Thanks/i;
         wildcat16 = /2016/i;
