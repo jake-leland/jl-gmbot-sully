@@ -32,7 +32,11 @@ function respond() {
         } else if (wildcat19.test(request.text)) {
             postMessage("AAAAAAAAA");
         } else {
-            console.log("don't care");
+            if(Math.random() < 0.2) {
+                postMessage("AND THAT'S WHAT WE'RE GONNA DO TO 'EM, AGS!");
+            } else {
+                console.log("don't care");
+            }
         }
         this.res.end();
     } else {
