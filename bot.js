@@ -24,13 +24,13 @@ function respond() {
         } else if (gigem.test(request.text)) {
             postMessage("... and Gig 'Em");
         } else if (wildcat16.test(request.text)) {
-            postMessage("AAAAAAAAA");
-        } else if (wildcat17.test(request.text)) {
-            postMessage("A-A-A-A-A");
-        } else if (wildcat18.test(request.text)) {
-            postMessage("A-A-A WHOOP");
-        } else if (wildcat19.test(request.text)) {
             postMessage("A WHOOP");
+        } else if (wildcat17.test(request.text)) {
+            postMessage("A-A-A WHOOP");
+        } else if (wildcat18.test(request.text)) {
+            postMessage("A-A-A-A-A");
+        } else if (wildcat19.test(request.text)) {
+            postMessage("AAAAAAAAA");
         } else {
             console.log("don't care");
         }
