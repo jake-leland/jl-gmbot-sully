@@ -1,4 +1,4 @@
-var http, director, cool, bot, router, server, port;
+var http, director, bot, router, server, port;
 
 http        = require('http');
 director    = require('director');
@@ -28,5 +28,5 @@ server.listen(port);
 
 function ping() {
   this.res.writeHead(200);
-  this.res.end("You shouldnt be here.");
+  this.res.end("You shouldn't be here.");
 }
