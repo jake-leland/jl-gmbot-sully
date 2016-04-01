@@ -7,7 +7,7 @@ function respond() {
         howdy = /Howdy|Sully/i,
         whoop = /Red( )?ass|Good Bull|Old Army/i;
         hiss = /t(-| )?sip|2%er|Two( |-)Percenter|Offsides/i;
-        gigem = /thanks/i;
+        gigem = /Thanks/i;
         wildcat16 = /2016/i;
         wildcat17 = /2017/i;
         wildcat18 = /2018/i;
@@ -21,7 +21,7 @@ function respond() {
             postMessage("WHOOP");
         } else if (hiss.test(request.text)) {
             postMessage("hisssssss");
-        } else if (thanks.test(request.text)) {
+        } else if (gigem.test(request.text)) {
             postMessage("... and Gig 'Em");
         } else if (wildcat16.test(request.text)) {
             postMessage("AAAAAAAAA");
