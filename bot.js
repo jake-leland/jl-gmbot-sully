@@ -4,12 +4,12 @@ var botID = process.env.BOT_ID;
 
 function respond() {
     var request = JSON.parse(this.req.chunks[0]),
-        howdy = /Howdy/i;
+        howdy = /Howdy|Sully/i;
 
     if (request.text && request.sender_type != "bot") {
         if(howdy.test(request.text)) {
             this.res.writeHead(200);
-            postMessage("Howdy!!");
+            postMessage("Howdy, " + request.name + "!!");
             this.res.end();
         } else {
             console.log("don't care");
